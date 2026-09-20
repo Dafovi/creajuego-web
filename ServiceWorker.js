@@ -1,9 +1,9 @@
 const cacheName = "DafoviSAS-Dafovi_LabCo-1.0";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
-    "Build/creajuego-web.framework.js.br",
-    "Build/creajuego-web.data.br",
-    "Build/creajuego-web.wasm.br",
+    "Build/creajuego-web.framework.js",
+    "Build/creajuego-web.data",
+    "Build/creajuego-web.wasm",
     "TemplateData/style.css"
 
 ];
