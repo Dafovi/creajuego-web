@@ -1,9 +1,9 @@
-const cacheName = "DafoviSAS-Dafovi_LabCo-1.0";
+const cacheName = "CreaJuego-Web-20260922031713";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
-    "Build/creajuego-web.framework.js",
-    "Build/creajuego-web.data",
-    "Build/creajuego-web.wasm",
+    "Build/creajuego-web.framework.js.unityweb",
+    "Build/creajuego-web.data.unityweb",
+    "Build/creajuego-web.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
@@ -31,3 +31,4 @@ self.addEventListener('fetch', function (e) {
       return response;
     })());
 });
+
