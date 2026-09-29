@@ -1,4 +1,4 @@
-const cacheName = "DafoviSAS-Dafovi_LabCo-1.1";
+const cacheName = "CreaJuego-Web-20260929130618";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
     "Build/creajuego-web.framework.js.unityweb",
