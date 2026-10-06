@@ -1,4 +1,4 @@
-const cacheName = "CreaJuego-Web-20260929130618";
+const cacheName = "CreaJuego-Web-20261006005523";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
     "Build/creajuego-web.framework.js.unityweb",
