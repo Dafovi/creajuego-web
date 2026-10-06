@@ -1,10 +1,12 @@
-const cacheName = "CreaJuego-Web-20261006005523";
+const cacheName = "CreaJuego-Web-20261006184341";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
     "Build/creajuego-web.framework.js.unityweb",
     "Build/creajuego-web.data.unityweb",
     "Build/creajuego-web.wasm.unityweb",
-    "TemplateData/style.css"
+    "TemplateData/style.css",
+    "TemplateData/biblored-logo.svg",
+    "TemplateData/gino-icon.png"
 
 ];
 
