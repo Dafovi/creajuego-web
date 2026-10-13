@@ -1,4 +1,4 @@
-const cacheName = "CreaJuego-Web-20261008020904";
+const cacheName = "CreaJuego-Web-20261013155039";
 const contentToCache = [
     "Build/creajuego-web.loader.js",
     "Build/creajuego-web.framework.js.unityweb",
@@ -12,6 +12,7 @@ const contentToCache = [
 
 self.addEventListener('install', function (e) {
     console.log('[Service Worker] Install');
+    self.skipWaiting();
     
     e.waitUntil((async function () {
       const cache = await caches.open(cacheName);
@@ -20,14 +21,25 @@ self.addEventListener('install', function (e) {
     })());
 });
 
+
+self.addEventListener('activate', function (e) {
+    e.waitUntil((async function () {
+      const names = await caches.keys();
+      await Promise.all(names
+        .filter(name => name.startsWith('CreaJuego-Web-') && name !== cacheName)
+        .map(name => caches.delete(name)));
+      await self.clients.claim();
+    })());
+});
+
 self.addEventListener('fetch', function (e) {
     e.respondWith((async function () {
-      let response = await caches.match(e.request);
+      const cache = await caches.open(cacheName);
+      let response = await cache.match(e.request);
       console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
       if (response) { return response; }
 
       response = await fetch(e.request);
-      const cache = await caches.open(cacheName);
       console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
       cache.put(e.request, response.clone());
       return response;
